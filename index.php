@@ -1,6 +1,6 @@
 <?php
 $is_auth = (bool) rand(0, 1);
-echo $is_auth;
+
 $user_name = 'Константин';
 $user_avatar = 'img/user.jpg';
 ?>
@@ -27,9 +27,9 @@ $user_avatar = 'img/user.jpg';
         <a class="main-header__add-lot button" href="add-lot.html">Добавить лот</a>
 
         <nav class="user-menu">
-		<?php if ($is_auth):?>
+		<?php if ($is_auth==True):?>
 			<div class="user-menu__image">
-				<img src=$user_avatar width="40" height="40" alt="Пользователь">
+				<img src="<?=$user_avatar;?>" width="40" height="40" alt="Пользователь">
 			</div>
 			<div class="user-menu__logged">
 				<p><?=$user_name;?></p>
